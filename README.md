@@ -50,6 +50,8 @@ To Add
 • Change icon in menu bar.   
 • Add @pause to patch making cmd and .bat application cmd.  
 • Update the version no. in GUI, other places.  
+• Add percentage / progress bar.  
+
 
 Planned, Optional
 ---------
