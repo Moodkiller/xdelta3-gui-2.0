@@ -3,7 +3,7 @@ A (rebooted) GUI for creating patches with xdelta3. Now uses xdelta3 3.1.0 with 
 
 Changelog includes: v2.0.9
 --------  
-• Added creation of 4.Apply Patch-Mac.command and xdelta3_mac executable.  
+• Added creation of 3.Apply Patch-Mac.command and xdelta3_mac executable.  
 • Fixed 3.Apply Patch-Linux.sh line endings format for unix.  
 
 Changelog includes: v2.0.8

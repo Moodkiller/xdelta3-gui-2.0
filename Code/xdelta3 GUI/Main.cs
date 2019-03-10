@@ -189,7 +189,7 @@ namespace xdelta3_GUI
             patchWriterLinux.WriteLine("mkdir old");
             patchWriterLinux.WriteLine("chmod +x xdelta3");
             // Batch creation - Mac //
-            StreamWriter patchWriterMac = new StreamWriter(dest + tempDir + "4.Apply Patch-Mac.command");
+            StreamWriter patchWriterMac = new StreamWriter(dest + tempDir + "3.Apply Patch-Mac.command");
             patchWriterMac.NewLine = "\n";
             patchWriterMac.WriteLine("#!/bin/sh");
             patchWriterMac.WriteLine("cd \"$(cd \"$(dirname \"$0\")\" && pwd)\"");

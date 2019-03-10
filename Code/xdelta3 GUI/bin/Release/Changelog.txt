@@ -1,7 +1,7 @@
 Changelog includes: v2.0.9
 -by dan0v
 --------
-• Added creation of 4.Apply Patch-Mac.command and added xdelta3_mac executable.
+• Added creation of 3.Apply Patch-Mac.command and added xdelta3_mac executable.
 • Fixed 3.Apply Patch-Linux.sh line endings format for unix.
 
 Changelog includes: v2.0.8
