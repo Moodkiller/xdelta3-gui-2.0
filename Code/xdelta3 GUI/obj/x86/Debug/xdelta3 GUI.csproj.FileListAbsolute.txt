@@ -55,3 +55,16 @@ C:\Users\brian\Desktop\xdelta3-gui-2.0-master2\xdelta3-gui-2.0-master - Copy\Cod
 C:\Users\brian\Desktop\xdelta3-gui-2.0-master2\xdelta3-gui-2.0-master - Copy\Code\xdelta3 GUI\bin\Release\xdelta3 GUI 2.0 v2.0.8.pdb
 C:\Users\brian\Desktop\xdelta3-gui-2.0-master2\xdelta3-gui-2.0-master - Copy\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI 2.0 v2.0.8.exe
 C:\Users\brian\Desktop\xdelta3-gui-2.0-master2\xdelta3-gui-2.0-master - Copy\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI 2.0 v2.0.8.pdb
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\xdelta-3.1.0-x86_64.exe
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\7za.exe
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\xdelta3 GUI 2.0 v2.0.9.exe
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\xdelta3 GUI 2.0 v2.0.9.pdb
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI.csprojAssemblyReference.cache
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3_GUI.Main.resources
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3_GUI.Properties.Resources.resources
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI.csproj.GenerateResource.cache
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI.csproj.CoreCompileInputs.cache
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI 2.0 v2.0.9.exe
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\obj\x86\Debug\xdelta3 GUI 2.0 v2.0.9.pdb
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\xdelta3
+C:\Users\regul\Google Drive\Personal Projects\VSstudio\xdelta3-gui-2.0\Code\xdelta3 GUI\bin\Release\xdelta3_mac

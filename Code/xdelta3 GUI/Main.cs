@@ -35,11 +35,12 @@ namespace xdelta3_GUI
             string zipName = this.zipNameTextBox.Text;
             string patchExt = this.patchExtTextBox.Text.Trim();
             string xdeltaLinux = "./xdelta3";
+            string xdeltaMac = "./xdelta3_mac";
             //xdelta3 source wildcard
             //Limitation:
-                //the file should be like "xdelta*.exe"
-                //the file name should NOT contain the word "GUI" (caps only)
-                //it will automatically select the first file to meet the above conditions
+            //the file should be like "xdelta*.exe"
+            //the file name should NOT contain the word "GUI" (caps only)
+            //it will automatically select the first file to meet the above conditions
             string xdeltaFileName = "";
             string[] currentDirFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.exe");
             foreach(string temp in currentDirFiles) {
@@ -163,6 +164,13 @@ namespace xdelta3_GUI
             readmeWriter.WriteLine("3. Alternatively, if you're using a GUI, double click 3.Apply Patch-Linux.sh and a terminal window should appear.");
             readmeWriter.WriteLine("4. Once patching is complete, you will find your new files in the main folder and the originals in a folder called 'old'.");
             readmeWriter.WriteLine("5. Enjoy.");
+            readmeWriter.WriteLine("");
+            readmeWriter.WriteLine("Mac:");
+            readmeWriter.WriteLine("1. Copy your original files into this folder. DO NOT RENAME!!");
+            readmeWriter.WriteLine("2. In terminal, type: " + '"' + "4.Apply Patch-Mac.command" + '"' + ". Patching should start automatically.");
+            readmeWriter.WriteLine("3. Alternatively, if you're using a GUI, double click 4.Apply Patch-Mac.command and a terminal window should appear.");
+            readmeWriter.WriteLine("4. Once patching is complete, you will find your new files in the main folder and the originals in a folder called 'old'.");
+            readmeWriter.WriteLine("5. Enjoy.");
             readmeWriter.Close();
 
                 //Changelog.txt creation//
@@ -175,9 +183,18 @@ namespace xdelta3_GUI
             patchWriterWindows.WriteLine("mkdir old");
             // Batch creation - Linux //
             StreamWriter patchWriterLinux = new StreamWriter(dest + tempDir + "3.Apply Patch-Linux.sh");
-            patchWriterLinux.WriteLine("` #!/bin/sh`");
-            patchWriterLinux.WriteLine("` mkdir old`");
-            patchWriterLinux.WriteLine("` chmod +x xdelta3`");
+            patchWriterLinux.NewLine = "\n";
+            patchWriterLinux.WriteLine("#!/bin/sh");
+            patchWriterLinux.WriteLine("cd \"$(cd \"$(dirname \"$0\")\" && pwd)\"");
+            patchWriterLinux.WriteLine("mkdir old");
+            patchWriterLinux.WriteLine("chmod +x xdelta3");
+            // Batch creation - Mac //
+            StreamWriter patchWriterMac = new StreamWriter(dest + tempDir + "4.Apply Patch-Mac.command");
+            patchWriterMac.NewLine = "\n";
+            patchWriterMac.WriteLine("#!/bin/sh");
+            patchWriterMac.WriteLine("cd \"$(cd \"$(dirname \"$0\")\" && pwd)\"");
+            patchWriterMac.WriteLine("mkdir ./old");
+            patchWriterMac.WriteLine("chmod +x ./xdelta3_mac");
             //
             StreamWriter tempCmdWriter = new StreamWriter(dest + tempDir + "doNotDelete-Windows.bat");
             tempCmdWriter.WriteLine("set path = \"" + Directory.GetCurrentDirectory() + "\"");
@@ -186,8 +203,11 @@ namespace xdelta3_GUI
                 patchWriterWindows.WriteLine(".\\" + xdeltaFileName + " -v -d -s \"{0}\" " + "\".\\" + subDir + "\\" + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + "\\" + (i + 1).ToString(), this.newFileNames[i]);
                 patchWriterWindows.WriteLine("move \"{0}\" old", this.oldFileNames[i]);
                 // Batch creation - Linux //
-                patchWriterLinux.WriteLine("` " + "xdelta3" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"" + "`", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
-                patchWriterLinux.WriteLine("` mv \"{0}\" old`", this.oldFileNames[i]);
+                patchWriterLinux.WriteLine("xdelta3" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
+                patchWriterLinux.WriteLine("mv \"{0}\" old", this.oldFileNames[i]);
+                // Batch creation - Mac //
+                patchWriterMac.WriteLine("./xdelta3_mac" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
+                patchWriterMac.WriteLine("mv \"{0}\" old", this.oldFileNames[i]);
                 //
                 if (!batchOnlyCheckBox.Checked)
                 {
@@ -198,6 +218,7 @@ namespace xdelta3_GUI
             patchWriterWindows.WriteLine("echo Completed!");
             patchWriterWindows.WriteLine("@pause");
             patchWriterLinux.Close();
+            patchWriterMac.Close();
 
             // Temp .bat creation for single CMD window - WINDOWS //
             tempCmdWriter.Close();
@@ -222,6 +243,7 @@ namespace xdelta3_GUI
             if (this.copyxdeltaCheckBox.Checked)
                 File.Copy(xdeltaFileName, dest + tempDir + xdeltaFileName, true);
                 File.Copy(xdeltaLinux, dest + tempDir + "xdelta3", true);
+                File.Copy(xdeltaMac, dest + tempDir + "xdelta3_mac", true);
 
             if (this.zipCheckBox.Checked)
             {
