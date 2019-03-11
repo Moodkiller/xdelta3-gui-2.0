@@ -203,7 +203,7 @@ namespace xdelta3_GUI
                 patchWriterWindows.WriteLine(".\\" + xdeltaFileName + " -v -d -s \"{0}\" " + "\".\\" + subDir + "\\" + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + "\\" + (i + 1).ToString(), this.newFileNames[i]);
                 patchWriterWindows.WriteLine("move \"{0}\" old", this.oldFileNames[i]);
                 // Batch creation - Linux //
-                patchWriterLinux.WriteLine("xdelta3" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
+                patchWriterLinux.WriteLine("./xdelta3" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
                 patchWriterLinux.WriteLine("mv \"{0}\" old", this.oldFileNames[i]);
                 // Batch creation - Mac //
                 patchWriterMac.WriteLine("./xdelta3_mac" + " -v -d -s \"{0}\" " + '"' + subDir + '/' + "{0}." + patchExt + "\" \"{2}\"", this.oldFileNames[i], subDir + (i + 1).ToString(), this.newFileNames[i]);
