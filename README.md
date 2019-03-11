@@ -5,6 +5,7 @@ Changelog includes: v2.0.9
 --------  
 • Added creation of 3.Apply Patch-Mac.command and xdelta3_mac executable.  
 • Fixed 3.Apply Patch-Linux.sh line endings format for unix.  
+• Replaced xdelta3 Binary with Ubuntu x86_64 compatible version.
 
 Changelog includes: v2.0.8
 --------
