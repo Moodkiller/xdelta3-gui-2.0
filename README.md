@@ -1,6 +1,29 @@
 A (rebooted) GUI for creating patches with xdelta3. Now uses xdelta3 3.1.0 with some added features.
 -by Moodkiller
 
+Download
+--------  
+https://github.com/Moodkiller/xdelta3-gui-2.0/releases
+
+Screenshots
+--------
+Soon(TM)
+
+To Add
+---------
+• Make gui draggable while patch making is running.  
+• Add @pause to patch making cmd and .bat application cmd.  
+• Add percentage / progress bar.  
+
+
+Planned, Optional
+---------
+• Improve UI (scallable, movable while patching).  
+• During any time consuming processing, the application becomes unresponsive. Need to add a message/fix it.  
+• Make help/add tooltips.   
+• Allow to add directories using the "Add" button.   
+
+
 Changelog includes: v2.0.9
 --------  
 • Added creation of 3.Apply Patch-Mac.command and xdelta3_mac executable.  
@@ -46,23 +69,3 @@ v2.0.2
 --------
 • xdelta3 source wildcard (so that any new version of xdelta can be placed in the root folder).  
 • Added a new option where one could specify what patch extension they would like.
-
-
-
-
-To Add
----------
-• Make gui draggable while patch making is running.  
-• Change icon in menu bar.   
-• Add @pause to patch making cmd and .bat application cmd.  
-• Update the version no. in GUI, other places.  
-• Add percentage / progress bar.  
-
-
-Planned, Optional
----------
-• Improve UI.  
-• During any time consuming processing, the application becomes unresponsive. Need to add a message/fix it.  
-• Make help/add tooltips.   
-• Allow to add directories using the "Add" button.   
-
