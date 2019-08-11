@@ -501,7 +501,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "xdelta3 GUI 2.0  v2.0.8";
+            this.Text = "xdelta3 GUI 2.0  v2.0.9";
             this.Load += new System.EventHandler(this.Main_Load);
             this.filesGroupBox.ResumeLayout(false);
             this.filesGroupBox.PerformLayout();

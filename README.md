@@ -1,6 +1,12 @@
 A (rebooted) GUI for creating patches with xdelta3. Now uses xdelta3 3.1.0 with some added features.
 -by Moodkiller
 
+Changelog includes: v2.0.9
+--------  
+• Added creation of 3.Apply Patch-Mac.command and xdelta3_mac executable.  
+• Fixed 3.Apply Patch-Linux.sh line endings format for unix.  
+• Replaced xdelta3 Binary with Ubuntu x86_64 compatible version.
+
 Changelog includes: v2.0.8
 --------
 • Fixed 3.Apply Patch-Windows.bat creation to look in correct directory for xdelta3 executable.  
